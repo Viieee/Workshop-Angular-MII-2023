@@ -6,6 +6,22 @@
 
 function perkalianUnik(arr) {
   // you can only write your code here!
+  let resultArray = []; // buat array baru untuk nampung hasil akhir
+  arr.forEach(function(element, index){
+    let newArray = arr.filter(function(e, i){
+       // filter array berdasarkan index
+       // kembalikan element array yang indexnya tidak sama
+      return i != index;
+    })
+    let total = 1; // total awal
+    for(let j = 0; j < newArray.length; j++){
+      // total dikali element yang sedang diiterasi
+      total *= newArray[j];
+    }
+    // push ke array result
+    resultArray.push(total);
+  });
+  return resultArray;
 }
 
 // TEST CASES

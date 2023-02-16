@@ -6,6 +6,13 @@
 
 function cariMean(arr) {
   // you can only write your code here!
+  // buat variable penampung value total, tambahkan element iterasi ke total lalu bagi dengan jumlah total element pada array 
+  let total = 0;
+  for(let i = 0; i <= arr.length - 1; i++ ){
+    total += arr[i];
+  }
+  // bulatkan hasil
+  return Math.round(total/arr.length);
 }
 
 // TEST CASES

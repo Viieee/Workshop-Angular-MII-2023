@@ -6,6 +6,16 @@
 
 function pasanganTerbesar(num) {
   // you can only write your code here!
+  // buat array baru yang isinya gabungan dari angka yang bersebelahan dari argumen
+  let arr = [];
+  for(let i = 0; i <= String(num).length - 1;i++){
+    if(String(num)[i+1]!=null){
+      arr.push(`${String(num)[i]}${String(num)[i+1]}`)
+    }
+  }
+  // untuk mengambil yang terbesar dari element dalam array digunakan operator spread
+  // operator spread akan mengeluarkan seluruh elemen pada sebuah array dan disajikan secara standalone
+  return Math.max(...arr);
 }
 
 // TEST CASES

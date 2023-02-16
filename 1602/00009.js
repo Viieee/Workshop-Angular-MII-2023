@@ -6,6 +6,12 @@
 
 function palindrome(kata) {
   // you can only write your code here!
+  // buat variable baru dengan string yang dibalik lalu dicompare dengan argumen function ini
+  let newKata = "";
+  for(let i = kata.length - 1; i >= 0 ; i--){
+    newKata+=kata[i];
+  }
+  return newKata === kata; // return comparison (secara default type datanya boolean)
 }
 
 // TEST CASES

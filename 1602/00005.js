@@ -7,6 +7,13 @@
 
 function balikKata(kata) {
   // you can only write your code here!
+  // string mirip array, dalam artian tiap karakter memiliki index
+  // gunakan for loop untuk mereverse dari belakang ke depan dan diassign ke variable baru
+  let newKata = "";
+  for(let i = kata.length - 1; i >= 0 ; i--){
+    newKata+=kata[i];
+  }
+  return newKata;
 }
 
 // TEST CASES

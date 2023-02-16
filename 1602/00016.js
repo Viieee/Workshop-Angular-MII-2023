@@ -6,6 +6,16 @@
 
 function tentukanDeretGeometri(arr) {
   // you can only write your code here!
+    // membandingkan jarak perkalian antara 2 element pertama dengan element selanjutnya
+    let distance = arr[1] / arr[0]; // patokan
+    for (let i=2; i< arr.length; i++){
+      if (arr[i] / arr[i-1] != distance){
+        // jika jarak antara arr[i] dan arr[i-1] tidak sama dengan patokan maka return false
+        return false;
+      }
+    }
+    // jika sama return true
+    return true;
 }
 
 // TEST CASES
