@@ -6,6 +6,9 @@
 
 function urutkanAbjad(str) {
   // you can only write your code here!
+  let chars = str.split(""); // memisah kata ke individual character, menjadi array
+  chars.sort(); // sorting huruf yang ada pada array chars
+  return chars.join(""); // join menjadi 1 string kembali
 }
 
 // TEST CASES

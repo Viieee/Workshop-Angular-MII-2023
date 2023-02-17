@@ -5,6 +5,19 @@
 
 function tukarBesarKecil(kalimat) {
   // you can only write your code here!
+  let chars = kalimat.split(""); // plit kalimat menjadi karakter, array.
+  for(let i = 0; i < chars.length; i++){
+    // loop isi array
+    if(chars[i] == chars[i].toUpperCase()){
+      // jika karakter uppercase, buat lowercase
+      chars[i] = chars[i].toLowerCase();
+    }
+    else{
+      // jika karakter lowercase, buat uppercase
+      chars[i] = chars[i].toUpperCase();
+    }
+  }
+  return chars.join(""); // buat jadi string lagi
 }
 
 // TEST CASES

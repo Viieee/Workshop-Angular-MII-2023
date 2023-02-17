@@ -12,6 +12,26 @@
 
 function groupAnimals(animals) {
   // you can only write your code here!
+  let returnArray = [];
+  let firstLetters = []
+  let sortedArray = animals.sort();
+  sortedArray.forEach(element => {
+    // mengambil huruf pertama dari tiap element
+    const firstLetter = element.charAt(0);
+    let check = firstLetters.find(el => el === firstLetter);
+    if(check == null){
+      // jika first letter dari element belum ada, push ke array
+      firstLetters.push(firstLetter);
+    }
+  });
+
+  firstLetters.forEach(element=>{
+    let currentLetterMatch = animals.filter(function(e,i){
+      return e.charAt(0) == element;
+    })
+    returnArray.push(currentLetterMatch);
+  })
+   console.log(returnArray);
 }
 
 // TEST CASES
